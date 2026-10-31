@@ -1,0 +1,31 @@
+Table,Step,Column(s),Issue / check,Action taken,Rows affected
+orders,Trim text,all text columns,Leading/trailing spaces,Trimmed (none needed),0
+orders,Duplicates,order_id,Duplicate order IDs / rows,Checked; none found,0
+orders,Data types,"order_date, order_time",Stored as text,Converted to date / time,138116
+orders,Fix category,customer_state,Truncated name 'North Rhine',Renamed 'North Rhine-Westphalia',2507
+orders,Fill blanks,return_status,Blank = not applicable,Filled 'Not Returned',128654
+orders,Fill blanks,return_reason,Blank = not applicable,Filled 'Not Returned',128654
+orders,Fill blanks,campaign_name,Blank = not applicable,Filled 'No Campaign',83233
+orders,Fill blanks,coupon_code,Blank = not applicable,Filled 'No Coupon',110502
+orders,Fill blanks,review_sentiment,Blank = not applicable,Filled 'No Review',24557
+orders,Fill blanks,customer_review,Blank = not applicable,Filled 'No Review',24557
+orders,Kept blank,delivery_days,Blank for Cancelled/Pending/Returned (never delivered/reviewed),Left NULL on purpose,24557
+orders,Kept blank,estimated_delivery_days,Blank for Cancelled/Pending/Returned (never delivered/reviewed),Left NULL on purpose,24557
+orders,Kept blank,customer_rating,Blank for Cancelled/Pending/Returned (never delivered/reviewed),Left NULL on purpose,24557
+orders,Reconciliation,items_reconciled,"Header totals differ from sum of line items (all 5,171 orders with 6+ lines and 6,055 with 2-5 lines)","Flag added; header used for order KPIs, items table used for product analysis",11226
+orders,New columns,order_year ... items_reconciled,Analysis helpers,Added derived columns,138116
+orders,Kept as is,profit,Negative-profit orders,"Genuine losses, kept",1296
+customer_master,Trim text,all text columns,Leading/trailing spaces,Trimmed (none needed),0
+customer_master,Data types,"customer_age, customer_acquisition_cost",Read as text,Converted to numbers,25000
+customer_master,Fix category,customer_state,Truncated name 'North Rhine',Renamed 'North Rhine-Westphalia',430
+customer_master,Orphans,customer_id,Customers with no orders,"Kept, flagged 'has_orders' = No",89
+customer_master,New columns,age_group,Analysis helper,Added age bands,25000
+product_catalog,Trim text,all text columns,Leading/trailing spaces,Trimmed (none needed),0
+product_catalog,Validation,unit_price vs product_cost,Price must exceed cost,Verified; all products have positive margin,0
+product_catalog,New columns,"gross_margin, margin_pct, price_tier",Analysis helpers,Added,1175
+order_items,Trim text,all text columns,Leading/trailing spaces,Trimmed (none needed),0
+order_items,Surrogate key,item_id,No unique row id (order_id + product_id repeats),Added item_id 1..n as primary key,397569
+order_items,Duplicates,"order_id, product_id",Same product on 2 lines of one order with different qty/discount,"Kept (not exact duplicates), flagged 'is_repeat_product_line'",174
+order_items,Validation,gross/net/profit,qty x price = gross; net = gross - discount + tax + shipping; profit = net - shipping - cost,"Verified, all rows consistent",0
+order_items,Validation,"product_id, order_id",Foreign keys exist in parent tables,"Verified, no orphans",0
+all tables,Rounding,money columns,Floating-point noise (e.g. 8.389999999),Rounded to 2 decimals,535685
