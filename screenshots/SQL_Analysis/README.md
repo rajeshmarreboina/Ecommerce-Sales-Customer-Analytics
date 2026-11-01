@@ -224,7 +224,7 @@ The project uses the following five tables:
 
 **Note:** These are validation assumptions. Any mismatches must be investigated against the dataset's actual financial calculation rules before classifying them as data errors.
 
-### SQL Project Outcome
+### SQL Outcome
 
 The SQL analysis establishes a foundation for further data analytics using Python, Microsoft Excel, and Power BI.
 
