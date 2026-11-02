@@ -1057,7 +1057,7 @@ ORDER BY currency, sales_month;
 - Discount bands in Query 3.7 use fixed amounts (100 and 500) that are not currency-adjusted, so band meaning differs between currencies such as INR and USD.
 - `order_items.net_sales` and `order_items.profit` are line-level values, while the sales table holds order-level values. Totals from the two tables are not expected to match exactly.
 
-## Project Structure
+## SQL Structure
 
 ```
 Ecommerce_Analytics_Project/
