@@ -1,0 +1,99 @@
+# SQL Analysis – E-Commerce Sales & Customer Analytics
+
+## 1. Project Database Overview
+
+This project uses five SQLite database tables to perform comprehensive E-Commerce Sales and Customer Analytics.
+
+### Database Tables
+
+| S.No. | Table Name | Description |
+|---|---|---|
+| 1 | `ecommerce_sales_customer_analytics` | Main order and sales transaction data |
+| 2 | `customer_master` | Customer demographic and profile information |
+| 3 | `dataset_statistics` | Dataset summary and statistical information |
+| 4 | `order_items` | Individual products and items associated with each order |
+| 5 | `product_catalog` | Product details, categories, brands, and pricing information |
+
+## 2. Database Schema Verification
+
+Before performing data analysis, all five tables will be examined to understand their database structure.
+
+The schema verification process includes:
+
+- Identifying column names and data types.
+- Checking NULL and missing values.
+- Identifying duplicate records.
+- Verifying primary and foreign key relationships.
+- Understanding table relationships before performing JOIN operations.
+- Validating data consistency before calculating business KPIs.
+
+This step helps prevent incorrect joins, duplicate aggregations, and inaccurate business metrics.
+
+## 3. SQL Analysis Roadmap
+
+The project is divided into ten analytical phases.
+
+| Phase | Analysis | SQL Concepts |
+|---|---|---|
+| 1 | Database and Schema Audit | PRAGMA, COUNT, DISTINCT |
+| 2 | Data Quality Audit | NULL checks, Duplicates, CASE |
+| 3 | Customer Analysis | GROUP BY, HAVING |
+| 4 | Sales and Profitability Analysis | SUM, AVG, MIN, MAX |
+| 5 | Product Performance Analysis | JOIN, Subqueries |
+| 6 | Monthly and Yearly Sales Trends | SQLite Date Functions |
+| 7 | Marketing and Discount Analysis | CTE, CASE |
+| 8 | Returns and Delivery Analysis | Conditional Aggregation |
+| 9 | Advanced Business Analysis | Window Functions, RANK |
+| 10 | Final Business Reporting | Views, KPIs, Recommendations |
+
+## 4. Phase 1 – Database and Schema Audit
+
+The first phase focuses on understanding the database structure before writing analytical queries.
+
+### Key Activities
+
+1. List all available database tables.
+2. Inspect the columns in each table.
+3. Identify column data types.
+4. Check total records in each table.
+5. Identify unique values in important categorical columns.
+6. Examine potential primary and foreign key relationships.
+
+### SQL Concepts
+
+- `sqlite_master`
+- `PRAGMA table_info()`
+- `COUNT(*)`
+- `COUNT(DISTINCT column_name)`
+- `SELECT DISTINCT`
+
+## 5. Project Tools
+
+- Database: SQLite
+- SQL Environment: DB Browser for SQLite
+- Version Control: Git and GitHub
+
+## 6. Expected Outcome
+
+The SQL analysis aims to identify:
+
+- Customer purchasing patterns.
+- Sales and revenue trends.
+- Product and category performance.
+- Profitability and discount impact.
+- Marketing performance.
+- Returns and delivery patterns.
+- Actionable business insights and recommendations.
+
+## 7. Documentation Approach
+
+Each SQL script is organized by analytical phase and includes:
+
+- Query title and objective.
+- Business question.
+- SQL implementation.
+- Explanation of important SQL concepts.
+- Output description.
+- Business relevance.
+
+All analytical findings and recommendations will be based on actual query results.
