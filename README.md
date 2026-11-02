@@ -1,7 +1,6 @@
 # Ecommerce-Sales-Customer-Analytics
 End-to-End E-Commerce Sales and Customer Analytics using SQL, Python, Excel and Power BI.
 
-# E-Commerce Sales & Customer Analytics
 
 ## Project Overview
 An end-to-end data analytics project focused on analyzing e-commerce sales, customer behavior, product performance, profitability, and business trends.
