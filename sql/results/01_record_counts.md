@@ -1,5 +1,4 @@
 
-/*
 =========================================================
 PROJECT NAME : E-Commerce Sales Analysis
 MODULE       : Dataset Record Count Verification
