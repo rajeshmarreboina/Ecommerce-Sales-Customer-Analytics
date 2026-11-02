@@ -1,5 +1,5 @@
 
-=========================================================
+========================================================
 PROJECT NAME : E-Commerce Sales Analysis
 MODULE       : Dataset Record Count Verification
 FILE NAME   : 01_data_exploration.sql
