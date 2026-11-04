@@ -1075,8 +1075,8 @@ Ecommerce_Analytics_Project/
 
 ## Author
 
-**Marreboina Rajesh**
+***Marreboina Rajesh***
 M.Sc Data Science | Hyderabad, India
 LinkedIn: www.linkedin.com/in/rajesh-marreboina-948a18324
-
  | Email:marreboinarajesh@gmail.com
+ phone number : +91 6281366653
