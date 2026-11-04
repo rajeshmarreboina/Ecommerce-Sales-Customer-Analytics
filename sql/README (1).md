@@ -1077,4 +1077,6 @@ Ecommerce_Analytics_Project/
 
 **Marreboina Rajesh**
 M.Sc Data Science | Hyderabad, India
-LinkedIn: _add your link_ | Email: _add your email_
+LinkedIn: www.linkedin.com/in/rajesh-marreboina-948a18324
+
+ | Email:marreboinarajesh@gmail.com
